@@ -7,6 +7,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.Card
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
@@ -26,11 +28,11 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-
-
 @Preview
 @Composable
 fun MyTalesScreen() {
+    var cards = listOf(Card(), Card())
+
     Scaffold(
         topBar = { AppBar() }
     ) { paddingValues ->
@@ -39,42 +41,14 @@ fun MyTalesScreen() {
                 .fillMaxSize()
                 .padding(paddingValues)
         ) {
-            Card()
-            Card()
-            Card()
-            Card()
+            LazyColumn {
+                items(cards) { card ->
+                    Card()
+                    Card()
+                    Card()
+                    Card()
+                }
+            }
         }
     }
 }
-
-
-/*
-@Composable
-fun MyTalesScreen() {
-    Scaffold(
-        topBar = { AppBar() },
-        modifier = Modifier
-    ) { paddingValues ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(paddingValues)
-        ) {
-            Card()
-            Card()
-            Card()
-            Card()
-        }
-    }
-}
-
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    FlokiTheme {
-        MyTalesScreen()
-    }
-}
-
- */

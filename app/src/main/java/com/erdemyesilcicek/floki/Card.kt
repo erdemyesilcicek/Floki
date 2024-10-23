@@ -27,14 +27,13 @@ fun Card() {
         modifier = Modifier
             .fillMaxWidth()
             .height(180.dp)
-            .padding(20.dp)
+            .padding(10.dp)
     ) {
-
         Row(
             modifier = Modifier
                 .clickable { println("clickable clicked") }
                 .fillMaxSize()
-                .padding(5.dp)
+                .padding(2.dp)
         ) {
             Image(
                 painter = painterResource(id = R.drawable.logoapp),
@@ -48,14 +47,13 @@ fun Card() {
             Text(
                 text = "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem " +
                         "ipsum lorem ipsum lorem ipsum lorem ipsum" +
-                        "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem " +
-                        "ipsum lorem ipsum lorem ipsum lorem ipsum",
+                        "ipsum lorem ipsum lorem ipsum lorem ipsum ipsum ipsum",
                 fontSize = 12.sp,
-                textAlign = TextAlign.End,
-                modifier = Modifier.fillMaxSize(1f)
+                modifier = Modifier
+                    .fillMaxSize(1f)
+                    .padding(15.dp)
             )
         }
-
     }
 }
 
