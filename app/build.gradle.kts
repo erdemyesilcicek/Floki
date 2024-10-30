@@ -66,4 +66,11 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+
+    // Extended Icons
+    implementation("androidx.compose.material:material-icons-extended:1.7.4")
+
+    //Navigation
+    val nav_version = "2.6.0-rc01"
+    implementation("androidx.navigation:navigation-compose:$nav_version")
 }
