@@ -12,11 +12,17 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
@@ -72,6 +78,9 @@ fun GenreCardItem(index: Int) {
     val image = card.image
     val text = card.text
 
+    val myButtonColor = colorScheme.primary
+    var buttonColor by remember { mutableStateOf(Color.White) }
+
     Column(
         modifier = Modifier
             .padding(start = 10.dp, 5.dp),
@@ -86,8 +95,7 @@ fun GenreCardItem(index: Int) {
                 modifier = Modifier
                     .clip(RoundedCornerShape(20.dp))
                     .width(100.dp)
-                    .height(100.dp)
-                    .background(MaterialTheme.colorScheme.background),
+                    .height(100.dp),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -101,16 +109,22 @@ fun GenreCardItem(index: Int) {
                             onClickLabel = "Clickable Image",
                             onClick = {
                                 if (text == "Adventure") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Adventure Clicked")
                                 } else if (text == "Fantastic") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Fantastic Clicked")
                                 } else if (text == "Mystery") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Mystery Clicked")
                                 } else if (text == "Space") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Space Clicked")
                                 } else if (text == "Trip") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Trip Clicked")
                                 } else if (text == "Family") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Family Clicked")
                                 }
                             }

@@ -44,9 +44,11 @@ fun ExtendedFAB(
         ) {
             Icon(
                 imageVector = icon,
-                contentDescription = contentDescription
+                contentDescription = contentDescription,
+                tint = Color.White
             )
             Text(
+                color = Color.White,
                 text = text,
                 fontSize = 20.sp,
                 fontWeight = FontWeight.Normal,

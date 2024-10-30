@@ -12,8 +12,13 @@ import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.MaterialTheme.colorScheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -102,8 +107,11 @@ fun AnimalSection() {
 fun AnimalCardItem(index: Int) {
     val card = animalCards[index]
 
+    val myButtonColor = colorScheme.primary
+
     val image = card.image
     val text = card.text
+    var buttonColor by remember { mutableStateOf(Color.White) }
 
     Column(
         modifier = Modifier
@@ -120,7 +128,7 @@ fun AnimalCardItem(index: Int) {
                     .clip(RoundedCornerShape(20.dp))
                     .width(100.dp)
                     .height(100.dp)
-                    .background(MaterialTheme.colorScheme.background),
+                    .background(buttonColor),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -134,42 +142,56 @@ fun AnimalCardItem(index: Int) {
                             onClickLabel = "Clickable Image",
                             onClick = {
                                 if (text == "Bear") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Bear Clicked")
                                 } else if (text == "Boar") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Boar Clicked")
                                 } else if (text == "Camel") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Camel Clicked")
                                 } else if (text == "Cat") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Cat Clicked")
                                 }
                                 else if (text == "Chicken") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Chicken Clicked")
                                 }
                                 else if (text == "Cow") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Cow Clicked")
                                 }
                                 else if (text == "Crocodile") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Crocodile Clicked")
                                 }
                                 else if (text == "Dog") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Dog Clicked")
                                 }
                                 else if (text == "Elephant") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Elephant Clicked")
                                 }
                                 else if (text == "Fox") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Fox Clicked")
                                 }
                                 else if (text == "Lion") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Lion Clicked")
                                 }
                                 else if (text == "Monkey") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Monkey Clicked")
                                 }
                                 else if (text == "Seal") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Seal Clicked")
                                 }
                                 else if (text == "Wolf") {
+                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
                                     println("Wolf Clicked")
                                 }
                             }
