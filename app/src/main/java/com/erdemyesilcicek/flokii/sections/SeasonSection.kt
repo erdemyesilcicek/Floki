@@ -34,7 +34,7 @@ import com.erdemyesilcicek.flokii.R
 import com.erdemyesilcicek.flokii.datas.DataCardSection
 import com.erdemyesilcicek.flokii.datas.myFont
 
-val seasonCards = listOf(
+val seasonCards = listOf<DataCardSection>(
     DataCardSection(
         R.drawable.seasonssummer,
         "Summer"
