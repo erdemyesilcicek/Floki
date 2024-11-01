@@ -16,6 +16,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
@@ -26,8 +27,8 @@ import com.erdemyesilcicek.flokii.ui.theme.FlokiiTheme
 fun AppBar(isHomeScreen: Boolean, barText: String, navController: NavController) {
     TopAppBar(
         colors = TopAppBarDefaults.topAppBarColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer,
-            titleContentColor = MaterialTheme.colorScheme.primary
+            containerColor = Color.White,
+            titleContentColor = MaterialTheme.colorScheme.onBackground
         ),
         title = {
             Box(
@@ -47,7 +48,7 @@ fun AppBar(isHomeScreen: Boolean, barText: String, navController: NavController)
                     Icon(
                         imageVector = Icons.Rounded.ArrowBackIosNew,
                         contentDescription = "back button",
-                        tint = MaterialTheme.colorScheme.primary
+                        tint = MaterialTheme.colorScheme.onBackground
                     )
                 }
             }
@@ -60,7 +61,7 @@ fun AppBar(isHomeScreen: Boolean, barText: String, navController: NavController)
                 Icon(
                     imageVector = Icons.Rounded.Menu,
                     contentDescription = "Menu Button",
-                    tint = MaterialTheme.colorScheme.primary
+                    tint = MaterialTheme.colorScheme.onBackground
                 )
             }
         }

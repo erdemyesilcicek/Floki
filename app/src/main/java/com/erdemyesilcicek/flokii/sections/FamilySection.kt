@@ -69,6 +69,9 @@ fun FamilyCardItem(index: Int) {
     val myButtonColor = colorScheme.primary
     var buttonColor by remember { mutableStateOf(Color.White) }
 
+    val myTextColor = colorScheme.primary
+    var textColor by remember { mutableStateOf(Color.Gray) }
+
     Column(
         modifier = Modifier
             .padding(start = 10.dp, 5.dp),
@@ -98,13 +101,22 @@ fun FamilyCardItem(index: Int) {
                             onClickLabel = "Clickable Image",
                             onClick = {
                                 if (text == "Dad") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Dad Clicked")
                                 } else if (text == "Mom") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Mom Clicked")
                                 } else if (text == "Sis") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Sis Clicked")
                                 }
                             }
@@ -115,6 +127,7 @@ fun FamilyCardItem(index: Int) {
         Text(
             modifier = Modifier.padding(start = 10.dp),
             text = text,
+            color = textColor,
             fontSize = 16.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Normal,

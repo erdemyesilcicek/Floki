@@ -97,6 +97,9 @@ fun CharacterCardItem(index: Int) {
     val myButtonColor = colorScheme.primary
     var buttonColor by remember { mutableStateOf(Color.White) }
 
+    val myTextColor = colorScheme.primary
+    var textColor by remember { mutableStateOf(Color.Gray) }
+
     Column(
         modifier = Modifier
             .padding(start = 10.dp, 5.dp),
@@ -126,34 +129,64 @@ fun CharacterCardItem(index: Int) {
                             onClickLabel = "Clickable Image",
                             onClick = {
                                 if (text == "Chef") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Chef Clicked")
                                 } else if (text == "Clown") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Clown Clicked")
                                 } else if (text == "Cowboy") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Cowboy Clicked")
                                 } else if (text == "Dwarf") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Dwarf Clicked")
                                 } else if (text == "Elf") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Elf Clicked")
                                 } else if (text == "King") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("King Clicked")
                                 } else if (text == "Ninja") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Ninja Clicked")
                                 } else if (text == "Pirate") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Pirate Clicked")
                                 } else if (text == "Thief") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Thief Clicked")
                                 } else if (text == "Wizard") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Wizard Clicked")
                                 }
                             }
@@ -164,6 +197,7 @@ fun CharacterCardItem(index: Int) {
         Text(
             modifier = Modifier.padding(start = 10.dp),
             text = text,
+            color = textColor,
             fontSize = 16.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Normal,

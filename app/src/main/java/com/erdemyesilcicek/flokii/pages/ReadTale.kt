@@ -50,9 +50,11 @@ fun ReadTaleScreen(navController: NavController) {
                     .padding(20.dp),
             ) {
                 Icon(
+                    modifier = Modifier.padding(20.dp),
                     imageVector = Icons.Rounded.Audiotrack,
                     contentDescription = "Listen to Tale",
-                    tint = Color.White)
+                    tint = Color.White
+                )
             }
         },
         floatingActionButtonPosition = FabPosition.End
@@ -63,7 +65,7 @@ fun ReadTaleScreen(navController: NavController) {
                 .padding(padding),
             Arrangement.Center,
             Alignment.CenterHorizontally
-        ){
+        ) {
             Text(
                 modifier = Modifier.padding(20.dp),
                 text = "1914 translation by H. Rackham",
@@ -71,12 +73,13 @@ fun ReadTaleScreen(navController: NavController) {
                 fontSize = 30.sp,
                 fontWeight = FontWeight.SemiBold,
                 fontFamily = myFont,
-                textAlign = TextAlign.Center)
+                textAlign = TextAlign.Center
+            )
 
             Icon(imageVector = Icons.Rounded.AutoFixHigh, contentDescription = "magic")
 
             LazyColumn(modifier = Modifier.fillMaxSize()) {
-                items(1){
+                items(1) {
                     Text(
                         modifier = Modifier.padding(20.dp),
                         fontWeight = FontWeight.Normal,
@@ -85,6 +88,10 @@ fun ReadTaleScreen(navController: NavController) {
                         text = "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
 
                     )
+                    Text(text = "")
+                    Text(text = "")
+                    Text(text = "")
+
 
                 }
             }

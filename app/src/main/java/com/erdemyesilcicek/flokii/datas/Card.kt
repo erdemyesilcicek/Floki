@@ -54,7 +54,8 @@ fun Card(navController: NavController) {
         Row(
             modifier = Modifier
                 .clickable { navController.navigate("ReadTaleScreen") }
-                .fillMaxSize().background(MaterialTheme.colorScheme.background),
+                .fillMaxSize()
+                .background(MaterialTheme.colorScheme.background),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Image(

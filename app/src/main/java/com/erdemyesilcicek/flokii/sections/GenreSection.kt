@@ -1,7 +1,9 @@
 package com.erdemyesilcicek.flokii.sections
 
+import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -22,6 +24,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
@@ -79,7 +82,12 @@ fun GenreCardItem(index: Int) {
     val text = card.text
 
     val myButtonColor = colorScheme.primary
+    val myBorderColor = colorScheme.primary
+    val myTextColor = colorScheme.primary
+
     var buttonColor by remember { mutableStateOf(Color.White) }
+    var borderColor by remember { mutableStateOf(Color.Transparent) }
+    var textColor by remember { mutableStateOf(Color.Gray) }
 
     Column(
         modifier = Modifier
@@ -95,7 +103,8 @@ fun GenreCardItem(index: Int) {
                 modifier = Modifier
                     .clip(RoundedCornerShape(20.dp))
                     .width(100.dp)
-                    .height(100.dp),
+                    .height(100.dp)
+                    .border(4.dp, borderColor, shape = RoundedCornerShape(20.dp)),
                 verticalArrangement = Arrangement.Center,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
@@ -109,22 +118,40 @@ fun GenreCardItem(index: Int) {
                             onClickLabel = "Clickable Image",
                             onClick = {
                                 if (text == "Adventure") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    borderColor =
+                                        if (borderColor == Color.Transparent) myBorderColor else Color.Transparent
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Adventure Clicked")
                                 } else if (text == "Fantastic") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    borderColor =
+                                        if (borderColor == Color.Transparent) myBorderColor else Color.Transparent
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Fantastic Clicked")
                                 } else if (text == "Mystery") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    borderColor =
+                                        if (borderColor == Color.Transparent) myBorderColor else Color.Transparent
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Mystery Clicked")
                                 } else if (text == "Space") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    borderColor =
+                                        if (borderColor == Color.Transparent) myBorderColor else Color.Transparent
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Space Clicked")
                                 } else if (text == "Trip") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    borderColor =
+                                        if (borderColor == Color.Transparent) myBorderColor else Color.Transparent
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Trip Clicked")
                                 } else if (text == "Family") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    borderColor =
+                                        if (borderColor == Color.Transparent) myBorderColor else Color.Transparent
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Family Clicked")
                                 }
                             }
@@ -134,6 +161,7 @@ fun GenreCardItem(index: Int) {
         }
         Text(
             modifier = Modifier.padding(start = 10.dp),
+            color = textColor,
             text = text,
             fontSize = 16.sp,
             textAlign = TextAlign.Center,

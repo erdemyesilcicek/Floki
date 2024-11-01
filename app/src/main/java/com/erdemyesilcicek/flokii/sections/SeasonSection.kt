@@ -73,6 +73,9 @@ fun SeasonCardItem(index: Int) {
     val myButtonColor = colorScheme.primary
     var buttonColor by remember { mutableStateOf(Color.White) }
 
+    val myTextColor = colorScheme.primary
+    var textColor by remember { mutableStateOf(Color.Gray) }
+
     Column(
         modifier = Modifier
             .padding(start = 10.dp, 5.dp),
@@ -102,16 +105,28 @@ fun SeasonCardItem(index: Int) {
                             onClickLabel = "Clickable Image",
                             onClick = {
                                 if (text == "Summer") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Summer Clicked")
                                 } else if (text == "Spring") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Spring Clicked")
                                 } else if (text == "Autumn") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Autumn Clicked")
                                 } else if (text == "Winter") {
-                                    buttonColor = if (buttonColor == Color.White) myButtonColor else Color.White
+                                    buttonColor =
+                                        if (buttonColor == Color.White) myButtonColor else Color.White
+                                    textColor =
+                                        if (textColor == Color.Gray) myTextColor else Color.Gray
                                     println("Winter Clicked")
                                 }
                             }
@@ -122,6 +137,7 @@ fun SeasonCardItem(index: Int) {
         Text(
             modifier = Modifier.padding(start = 10.dp),
             text = text,
+            color = textColor,
             fontSize = 16.sp,
             textAlign = TextAlign.Center,
             fontWeight = FontWeight.Normal,

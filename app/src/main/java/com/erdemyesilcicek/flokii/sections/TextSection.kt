@@ -19,20 +19,20 @@ import com.erdemyesilcicek.flokii.ui.theme.FlokiiTheme
 
 @Composable
 fun TextSection(title: String) {
-        Column(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(start = 10.dp, top = 10.dp),
-            verticalArrangement = Arrangement.Center,
-            horizontalAlignment = Alignment.Start
-        ) {
-            Text(
-                modifier = Modifier.padding(start = 10.dp),
-                text = title,
-                fontSize = 20.sp,
-                fontWeight = FontWeight.SemiBold,
-                fontFamily = myFont,
-                color = MaterialTheme.colorScheme.onBackground
-            )
-        }
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(start = 10.dp, top = 10.dp),
+        verticalArrangement = Arrangement.Center,
+        horizontalAlignment = Alignment.Start
+    ) {
+        Text(
+            modifier = Modifier.padding(start = 10.dp),
+            text = title,
+            fontSize = 20.sp,
+            fontWeight = FontWeight.SemiBold,
+            fontFamily = myFont,
+            color = MaterialTheme.colorScheme.onBackground
+        )
+    }
 }
