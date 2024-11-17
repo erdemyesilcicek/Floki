@@ -1,0 +1,166 @@
+package com.erdemyesilcicek.flokii.datas
+
+import com.erdemyesilcicek.flokii.R
+
+public val genreList = listOf(
+    DataCardSection(
+        R.drawable.genreadventure,
+        "Adventure"
+    ),
+    DataCardSection(
+        R.drawable.genrefantastic,
+        "Fantastic"
+    ),
+    DataCardSection(
+        R.drawable.genremystery,
+        "Mystery"
+    ),
+    DataCardSection(
+        R.drawable.genrespace,
+        "Space"
+    ),
+    DataCardSection(
+        R.drawable.genretrip,
+        "Trip"
+    ),
+    DataCardSection(
+        R.drawable.genrefamily,
+        "Family"
+    ),
+)
+
+public val animalList = listOf(
+    DataCardSection(
+        R.drawable.animalsbear,
+        "Bear"
+    ),
+    DataCardSection(
+        R.drawable.animalsboar,
+        "Boar"
+    ),
+    DataCardSection(
+        R.drawable.animalscamel,
+        "Camel"
+    ),
+    DataCardSection(
+        R.drawable.animalscat,
+        "Cat"
+    ),
+    DataCardSection(
+        R.drawable.animalschicken,
+        "Chicken"
+    ),
+    DataCardSection(
+        R.drawable.animalscow,
+        "Cow"
+    ),
+    DataCardSection(
+        R.drawable.animalscrocodile,
+        "Crocodile"
+    ),
+    DataCardSection(
+        R.drawable.animalsdog,
+        "Dog"
+    ),
+    DataCardSection(
+        R.drawable.animalselephant,
+        "Elephant"
+    ),
+    DataCardSection(
+        R.drawable.animalsfox,
+        "Fox"
+    ),
+    DataCardSection(
+        R.drawable.animalslion,
+        "Lion"
+    ),
+    DataCardSection(
+        R.drawable.animalsmonkey,
+        "Monkey"
+    ),
+    DataCardSection(
+        R.drawable.animalsseal,
+        "Seal"
+    ),
+    DataCardSection(
+        R.drawable.animalswolf,
+        "Wolf"
+    )
+)
+
+public val characterList = listOf(
+    DataCardSection(
+        R.drawable.characterschef,
+        "Chef"
+    ),
+    DataCardSection(
+        R.drawable.charactersclown,
+        "Clown"
+    ),
+    DataCardSection(
+        R.drawable.characterscowboy,
+        "Cowboy"
+    ),
+    DataCardSection(
+        R.drawable.charactersdwarf,
+        "Dwarf"
+    ),
+    DataCardSection(
+        R.drawable.characterself,
+        "Elf"
+    ),
+    DataCardSection(
+        R.drawable.charactersking,
+        "King"
+    ),
+    DataCardSection(
+        R.drawable.charactersninja,
+        "Ninja"
+    ),
+    DataCardSection(
+        R.drawable.characterspirate,
+        "Pirate"
+    ),
+    DataCardSection(
+        R.drawable.charactersthief,
+        "Thief"
+    ),
+    DataCardSection(
+        R.drawable.characterswizard,
+        "Wizard"
+    ),
+)
+
+public val familyList = listOf(
+    DataCardSection(
+        R.drawable.familydad,
+        "Dad"
+    ),
+    DataCardSection(
+        R.drawable.familymom,
+        "Mom"
+    ),
+    DataCardSection(
+        R.drawable.familysis,
+        "Sis"
+    )
+)
+
+public val seasonList = listOf<DataCardSection>(
+    DataCardSection(
+        R.drawable.seasonssummer,
+        "Summer"
+    ),
+    DataCardSection(
+        R.drawable.seasonsspring,
+        "Spring"
+    ),
+    DataCardSection(
+        R.drawable.seasonsautumn,
+        "Autumn"
+    ),
+    DataCardSection(
+        R.drawable.seasonswinter,
+        "Winter"
+    )
+)

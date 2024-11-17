@@ -23,12 +23,13 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.bar.AppBar
 import com.erdemyesilcicek.flokii.datas.ExtendedFAB
+import com.erdemyesilcicek.flokii.datas.animalList
+import com.erdemyesilcicek.flokii.datas.characterList
+import com.erdemyesilcicek.flokii.datas.familyList
+import com.erdemyesilcicek.flokii.datas.genreList
 import com.erdemyesilcicek.flokii.datas.myFont
-import com.erdemyesilcicek.flokii.sections.AnimalSection
-import com.erdemyesilcicek.flokii.sections.CharacterSection
-import com.erdemyesilcicek.flokii.sections.FamilySection
-import com.erdemyesilcicek.flokii.sections.GenreSection
-import com.erdemyesilcicek.flokii.sections.SeasonSection
+import com.erdemyesilcicek.flokii.datas.seasonList
+import com.erdemyesilcicek.flokii.sections.CustomSection
 import com.erdemyesilcicek.flokii.sections.TextSection
 
 @Composable
@@ -56,27 +57,19 @@ fun CreateTaleScreen(navController: NavController) {
         ) {
             items(1) {
                 TextSection("Genre")
-                GenreSection()
-
-                Spacer(modifier = Modifier.padding(5.dp))
+                CustomSection(list = genreList, false)
 
                 TextSection("Season")
-                SeasonSection()
-
-                Spacer(modifier = Modifier.padding(5.dp))
+                CustomSection(list = seasonList, false)
 
                 TextSection("Animal")
-                AnimalSection()
-
-                Spacer(modifier = Modifier.padding(5.dp))
+                CustomSection(list = animalList, true)
 
                 TextSection("Character")
-                CharacterSection()
-
-                Spacer(modifier = Modifier.padding(5.dp))
+                CustomSection(list = characterList, true)
 
                 TextSection("Include in the tale")
-                FamilySection()
+                CustomSection(list = familyList, true)
 
                 Spacer(modifier = Modifier.padding(50.dp))
 
