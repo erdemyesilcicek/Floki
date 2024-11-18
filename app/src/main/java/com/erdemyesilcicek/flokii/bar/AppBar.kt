@@ -1,6 +1,5 @@
 package com.erdemyesilcicek.flokii.bar
 
-
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -66,12 +65,4 @@ fun AppBar(isHomeScreen: Boolean, barText: String, navController: NavController)
             }
         }
     )
-}
-
-@Preview
-@Composable
-fun AppBarPreview() {
-    FlokiiTheme {
-        //AppBar(isHomeScreen = false,"My Tales")
-    }
 }

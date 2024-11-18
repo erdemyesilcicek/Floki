@@ -1,5 +1,6 @@
 package com.erdemyesilcicek.flokii.pages
 
+import androidx.annotation.Nullable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -33,10 +34,13 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.bar.AppBar
+import com.erdemyesilcicek.flokii.datas.TaleList
 import com.erdemyesilcicek.flokii.datas.myFont
 
 @Composable
-fun ReadTaleScreen(navController: NavController) {
+fun ReadTaleScreen(navController: NavController, id : Int?) {
+    val tale = TaleList.get(id!!)
+    println(tale)
     Scaffold(
         topBar = { AppBar(isHomeScreen = false, "My Tales", navController) },
         modifier = Modifier.fillMaxSize(),
@@ -68,7 +72,7 @@ fun ReadTaleScreen(navController: NavController) {
         ) {
             Text(
                 modifier = Modifier.padding(20.dp),
-                text = "1914 translation by H. Rackham",
+                text = tale.title,
                 color = MaterialTheme.colorScheme.primary,
                 fontSize = 30.sp,
                 fontWeight = FontWeight.SemiBold,
@@ -85,9 +89,7 @@ fun ReadTaleScreen(navController: NavController) {
                         fontWeight = FontWeight.Normal,
                         fontFamily = myFont,
                         fontSize = 20.sp,
-                        text = "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains." +
-                        "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains."
-
+                        text = tale.content
                     )
                     Spacer(modifier = Modifier.padding(20.dp))
 

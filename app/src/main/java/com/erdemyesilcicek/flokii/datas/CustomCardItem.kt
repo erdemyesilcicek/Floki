@@ -16,7 +16,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -29,13 +28,12 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun CustomCardItem(index: Int, item: DataCardSection, isSelected : Boolean, onClick : () -> Unit) {
-
+fun CustomCardItem(index: Int, item: DataCardSection, isSelected: Boolean, onClick: () -> Unit) {
     val myButtonColor = colorScheme.primary
-    var buttonColor by remember { mutableStateOf(Color.White) }
+    val buttonColor by remember { mutableStateOf(Color.White) }
 
     val myTextColor = colorScheme.primary
-    var textColor by remember { mutableStateOf(Color.Gray) }
+    val textColor by remember { mutableStateOf(Color.Gray) }
 
     Column(
         modifier = Modifier

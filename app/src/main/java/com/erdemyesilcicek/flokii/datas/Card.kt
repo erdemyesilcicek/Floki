@@ -17,7 +17,6 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontStyle
@@ -28,9 +27,9 @@ import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.R
 
 @Composable
-fun CardTextSection() {
+fun CardTitle(title: String) {
     Text(
-        text = "1914 translation by H. Rackham",
+        text = title,
         color = MaterialTheme.colorScheme.primary,
         fontSize = 20.sp,
         fontWeight = FontWeight.Medium,
@@ -41,8 +40,8 @@ fun CardTextSection() {
 }
 
 @Composable
-fun Card(navController: NavController) {
-    CardTextSection()
+fun Card(navController: NavController, card: Tale) {
+    CardTitle(card.title)
     OutlinedCard(
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.onBackground),
         onClick = { },
@@ -53,14 +52,14 @@ fun Card(navController: NavController) {
     ) {
         Row(
             modifier = Modifier
-                .clickable { navController.navigate("ReadTaleScreen") }
+                .clickable { navController.navigate("ReadTaleScreen"+"?id=${card.id}") }
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Image(
-                painter = painterResource(id = R.drawable.logoapp),
-                contentDescription = "Cards Photo",
+                painter = painterResource(card.image),
+                contentDescription = "Tale Photo",
                 contentScale = ContentScale.Fit
             )
             Column(
@@ -69,9 +68,9 @@ fun Card(navController: NavController) {
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
                 Text(
-                    modifier = Modifier,
+                    modifier = Modifier.padding(start = 10.dp),
                     maxLines = 5,
-                    text = "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains.",
+                    text = card.content,
                     fontSize = 16.sp,
                     fontWeight = FontWeight.Normal,
                     fontFamily = myFont,
@@ -82,4 +81,3 @@ fun Card(navController: NavController) {
         }
     }
 }
-
