@@ -24,7 +24,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.erdemyesilcicek.flokii.R
 
 @Composable
 fun CardTitle(title: String) {
@@ -52,7 +51,7 @@ fun Card(navController: NavController, card: Tale) {
     ) {
         Row(
             modifier = Modifier
-                .clickable { navController.navigate("ReadTaleScreen"+"?id=${card.id}") }
+                .clickable { navController.navigate("ReadTaleScreen" + "?id=${card.id}") }
                 .fillMaxSize()
                 .background(MaterialTheme.colorScheme.background),
             horizontalArrangement = Arrangement.SpaceBetween

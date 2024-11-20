@@ -21,14 +21,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import com.erdemyesilcicek.flokii.R
+import com.erdemyesilcicek.flokii.animations.LottieAnimation
 import com.erdemyesilcicek.flokii.bar.AppBar
-import com.erdemyesilcicek.flokii.datas.ExtendedFAB
-import com.erdemyesilcicek.flokii.datas.animalList
-import com.erdemyesilcicek.flokii.datas.characterList
-import com.erdemyesilcicek.flokii.datas.familyList
-import com.erdemyesilcicek.flokii.datas.genreList
+import com.erdemyesilcicek.flokii.customitems.ExtendedFAB
+import com.erdemyesilcicek.flokii.lists.animalList
+import com.erdemyesilcicek.flokii.lists.characterList
+import com.erdemyesilcicek.flokii.lists.familyList
+import com.erdemyesilcicek.flokii.lists.genreList
 import com.erdemyesilcicek.flokii.datas.myFont
-import com.erdemyesilcicek.flokii.datas.seasonList
+import com.erdemyesilcicek.flokii.lists.seasonList
 import com.erdemyesilcicek.flokii.sections.CustomSection
 import com.erdemyesilcicek.flokii.sections.TextSection
 
@@ -70,6 +72,10 @@ fun CreateTaleScreen(navController: NavController) {
 
                 TextSection("Include in the tale")
                 CustomSection(list = familyList, true)
+
+                LottieAnimation(R.raw.animation)
+                LottieAnimation(R.raw.bigstick)
+                LottieAnimation(R.raw.handanimation)
 
                 Spacer(modifier = Modifier.padding(50.dp))
 

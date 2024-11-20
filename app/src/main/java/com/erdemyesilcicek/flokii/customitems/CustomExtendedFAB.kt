@@ -1,4 +1,4 @@
-package com.erdemyesilcicek.flokii.datas
+package com.erdemyesilcicek.flokii.customitems
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.erdemyesilcicek.flokii.datas.myFont
 
 @Composable
 fun ExtendedFAB(

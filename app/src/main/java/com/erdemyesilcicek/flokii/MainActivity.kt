@@ -43,7 +43,7 @@ fun NavController() {
         composable(route = "CreateTaleScreen") {
             CreateTaleScreen(navController)
         }
-        composable("ReadTaleScreen" + "?id={id}", arguments = listOf(navArgument("id"){
+        composable("ReadTaleScreen" + "?id={id}", arguments = listOf(navArgument("id") {
             type = NavType.IntType
             defaultValue = -1
         })) {
@@ -51,7 +51,7 @@ fun NavController() {
             ReadTaleScreen(navController, id)
         }
         composable(route = "Card") {
-            Card(navController, card = Tale(5, "","",0))
+            Card(navController, card = Tale(5, "", "", 0))
         }
     }
 }

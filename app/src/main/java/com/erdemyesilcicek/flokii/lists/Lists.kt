@@ -1,6 +1,7 @@
-package com.erdemyesilcicek.flokii.datas
+package com.erdemyesilcicek.flokii.lists
 
 import com.erdemyesilcicek.flokii.R
+import com.erdemyesilcicek.flokii.datas.DataCardSection
 
 public val genreList = listOf(
     DataCardSection(

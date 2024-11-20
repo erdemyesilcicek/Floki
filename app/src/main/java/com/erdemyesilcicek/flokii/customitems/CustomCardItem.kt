@@ -1,4 +1,4 @@
-package com.erdemyesilcicek.flokii.datas
+package com.erdemyesilcicek.flokii.customitems
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -26,6 +26,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.erdemyesilcicek.flokii.datas.DataCardSection
+import com.erdemyesilcicek.flokii.datas.myFont
 
 @Composable
 fun CustomCardItem(index: Int, item: DataCardSection, isSelected: Boolean, onClick: () -> Unit) {
