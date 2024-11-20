@@ -25,11 +25,9 @@ public val TaleList = listOf(
     ),
     Tale(
         2,
-        "Rapunzel",
-        "Bebek bekleyen bir çift varmış. Komşuları olan kötü cadının bahçesinde, çok güzel rapunzel otları yetişirmiş. Kadın bu otlardan yemek istemiş ama kocası bahçeden gizlice ot toplarken cadıya yakalanmış.\n" +
-                "Cadı, “Bunları alabilirsin, ama doğacak bebeğinizi bana vermelisiniz,” demiş. Adam korkmuş ve kabul etmiş.\n" +
-                "Bebek doğar doğmaz cadı gelip kızı almış. Adını Rapunzel koymuş ve onu yüksek bir kuleye kapatmış. Kulede ne kapı ne de merdiven varmış, sadece küçük bir pencere varmış. Cadı kuleye her geldiğinde, “Rapunzel, Rapunzel, altın saçlarını sarkıt!” dermiş. Rapunzel de uzun saçlarını pencereden aşağı sarkıtırmış ve cadı tırmanarak yukarı çıkarmış. Bir gün, yakışıklı bir prens kuleye yakın bir yerde yürürken Rapunzel’in güzel şarkısını duymuş. Kulenin yanına gelip saklanmış. Cadının “Rapunzel, Rapunzel, altın saçlarını sarkıt!” dediğini duyunca, cadı gittikten sonra o da aynı şeyi söylemiş. Rapunzel saçlarını sarkıtmış ve prens yukarı çıkmış. Prensle Rapunzel hemen arkadaş olmuşlar. Prens, Rapunzel’i kurtarmak için bir plan yapmış. Ancak cadı bunu öğrenmiş ve çok öfkelenmiş. Rapunzel’i başka bir yere götürmüş ve prensin saçları sarkıtmasını beklediği kuleye bir tuzak kurmuş. Prens, cadıyla karşılaşınca düşüp gözlerini kaybetmiş. Yıllar sonra prens, ormanda dolaşırken Rapunzel’in şarkısını tekrar duymuş. İkisi birbirine sarılmış ve Rapunzel’in gözyaşları prensin gözlerini iyileştirmiş. Bundan sonra, Rapunzel ve prens mutlu bir şekilde yaşamışlar. Kötü cadı ise bir daha asla onları rahatsız edememiş.",
-        R.drawable.defaultrapunzel,
+        "Türeyiş",
+        "Uygur Türkleri, huzur ve bolluk içinde yaşarlarmış. Günlerden bir gün, ülkelerine gökyüzünden parlak bir ışık düşmüş. Bu ışığın geldiği yerden bir kutsal ağaç büyümüş. Ağacın dalları altın gibi parlıyormuş ve herkese umut veriyormuş. Bir gece, ağacın altından gizemli bir ses gelmiş. Halk, bu sesin Tanrı’nın bir işareti olduğunu anlamış. Kutsal ağacın içinden beş çocuk doğmuş. Bu çocuklar büyüdükçe çok bilge, güçlü ve cesur olmuşlar. Halk, bu çocukların Tanrı tarafından gönderildiğine inanmış ve onlara büyük bir sevgiyle bağlanmış. Bu beş bilge çocuk, Uygur halkına liderlik etmeye başlamış. İnsanlara nasıl barış içinde yaşayacaklarını, çalışkan ve cesur olmayı öğretmişler. Halk, onların rehberliğinde daha da güçlenmiş ve büyük bir medeniyet kurmuş. Bu masal, Uygur Türklerinin nasıl ortaya çıktığını ve Tanrı’nın onlara nasıl rehberler gönderdiğini anlatır. Her zaman doğaya saygı göstermenin, bilge ve dürüst olmanın önemini vurgular.",
+        R.drawable.defaulttureyis,
     ),
     Tale(
         3,
@@ -40,8 +38,10 @@ public val TaleList = listOf(
     ),
     Tale(
         4,
-        "Türeyiş",
-        "Uygur Türkleri, huzur ve bolluk içinde yaşarlarmış. Günlerden bir gün, ülkelerine gökyüzünden parlak bir ışık düşmüş. Bu ışığın geldiği yerden bir kutsal ağaç büyümüş. Ağacın dalları altın gibi parlıyormuş ve herkese umut veriyormuş. Bir gece, ağacın altından gizemli bir ses gelmiş. Halk, bu sesin Tanrı’nın bir işareti olduğunu anlamış. Kutsal ağacın içinden beş çocuk doğmuş. Bu çocuklar büyüdükçe çok bilge, güçlü ve cesur olmuşlar. Halk, bu çocukların Tanrı tarafından gönderildiğine inanmış ve onlara büyük bir sevgiyle bağlanmış. Bu beş bilge çocuk, Uygur halkına liderlik etmeye başlamış. İnsanlara nasıl barış içinde yaşayacaklarını, çalışkan ve cesur olmayı öğretmişler. Halk, onların rehberliğinde daha da güçlenmiş ve büyük bir medeniyet kurmuş. Bu masal, Uygur Türklerinin nasıl ortaya çıktığını ve Tanrı’nın onlara nasıl rehberler gönderdiğini anlatır. Her zaman doğaya saygı göstermenin, bilge ve dürüst olmanın önemini vurgular.",
-        R.drawable.defaulttureyis,
-    )
+        "Rapunzel",
+        "Bebek bekleyen bir çift varmış. Komşuları olan kötü cadının bahçesinde, çok güzel rapunzel otları yetişirmiş. Kadın bu otlardan yemek istemiş ama kocası bahçeden gizlice ot toplarken cadıya yakalanmış.\n" +
+                "Cadı, “Bunları alabilirsin, ama doğacak bebeğinizi bana vermelisiniz,” demiş. Adam korkmuş ve kabul etmiş.\n" +
+                "Bebek doğar doğmaz cadı gelip kızı almış. Adını Rapunzel koymuş ve onu yüksek bir kuleye kapatmış. Kulede ne kapı ne de merdiven varmış, sadece küçük bir pencere varmış. Cadı kuleye her geldiğinde, “Rapunzel, Rapunzel, altın saçlarını sarkıt!” dermiş. Rapunzel de uzun saçlarını pencereden aşağı sarkıtırmış ve cadı tırmanarak yukarı çıkarmış. Bir gün, yakışıklı bir prens kuleye yakın bir yerde yürürken Rapunzel’in güzel şarkısını duymuş. Kulenin yanına gelip saklanmış. Cadının “Rapunzel, Rapunzel, altın saçlarını sarkıt!” dediğini duyunca, cadı gittikten sonra o da aynı şeyi söylemiş. Rapunzel saçlarını sarkıtmış ve prens yukarı çıkmış. Prensle Rapunzel hemen arkadaş olmuşlar. Prens, Rapunzel’i kurtarmak için bir plan yapmış. Ancak cadı bunu öğrenmiş ve çok öfkelenmiş. Rapunzel’i başka bir yere götürmüş ve prensin saçları sarkıtmasını beklediği kuleye bir tuzak kurmuş. Prens, cadıyla karşılaşınca düşüp gözlerini kaybetmiş. Yıllar sonra prens, ormanda dolaşırken Rapunzel’in şarkısını tekrar duymuş. İkisi birbirine sarılmış ve Rapunzel’in gözyaşları prensin gözlerini iyileştirmiş. Bundan sonra, Rapunzel ve prens mutlu bir şekilde yaşamışlar. Kötü cadı ise bir daha asla onları rahatsız edememiş.",
+        R.drawable.defaultrapunzel,
+    ),
 )
