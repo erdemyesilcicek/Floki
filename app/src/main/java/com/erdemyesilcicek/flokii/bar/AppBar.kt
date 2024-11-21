@@ -52,7 +52,7 @@ fun AppBar(isHomeScreen: Boolean, barText: String, navController: NavController)
         },
         actions = {
             IconButton(
-                onClick = { println("menu clicked") },
+                onClick = { navController.navigate("NavActionButton") },
                 modifier = Modifier
             ) {
                 Icon(

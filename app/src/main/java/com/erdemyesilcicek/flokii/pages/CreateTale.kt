@@ -73,10 +73,6 @@ fun CreateTaleScreen(navController: NavController) {
                 TextSection("Include in the tale")
                 CustomSection(list = familyList, true)
 
-                LottieAnimation(R.raw.animation)
-                LottieAnimation(R.raw.bigstick)
-                LottieAnimation(R.raw.handanimation)
-
                 Spacer(modifier = Modifier.padding(50.dp))
 
                 Row(

@@ -14,6 +14,7 @@ import com.erdemyesilcicek.flokii.datas.Card
 import com.erdemyesilcicek.flokii.datas.Tale
 import com.erdemyesilcicek.flokii.pages.CreateTaleScreen
 import com.erdemyesilcicek.flokii.pages.MyTalesScreen
+import com.erdemyesilcicek.flokii.pages.NavActionButton
 import com.erdemyesilcicek.flokii.pages.ReadTaleScreen
 import com.erdemyesilcicek.flokii.ui.theme.FlokiiTheme
 
@@ -43,6 +44,10 @@ fun NavController() {
         composable(route = "CreateTaleScreen") {
             CreateTaleScreen(navController)
         }
+        composable(route = "NavActionButton") {
+            NavActionButton(navController)
+        }
+
         composable("ReadTaleScreen" + "?id={id}", arguments = listOf(navArgument("id") {
             type = NavType.IntType
             defaultValue = -1
