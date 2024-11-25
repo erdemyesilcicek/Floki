@@ -37,7 +37,12 @@ import com.erdemyesilcicek.flokii.sections.TextSection
 @Composable
 fun CreateTaleScreen(navController: NavController) {
     Scaffold(
-        topBar = { AppBar(isHomeScreen = false, "Create Tale", navController) },
+        topBar = {
+            AppBar(
+                isHomeScreen = false,
+                isEnableBarButton = false,
+                "Create Tale",
+                navController) },
         modifier = Modifier.fillMaxSize(),
 
         floatingActionButton = {

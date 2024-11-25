@@ -14,8 +14,9 @@ import com.erdemyesilcicek.flokii.datas.Card
 import com.erdemyesilcicek.flokii.datas.Tale
 import com.erdemyesilcicek.flokii.pages.CreateTaleScreen
 import com.erdemyesilcicek.flokii.pages.MyTalesScreen
-import com.erdemyesilcicek.flokii.pages.NavActionButton
 import com.erdemyesilcicek.flokii.pages.ReadTaleScreen
+import com.erdemyesilcicek.flokii.pages.Settings
+import com.erdemyesilcicek.flokii.pages.settingspages.FamilyInformation
 import com.erdemyesilcicek.flokii.ui.theme.FlokiiTheme
 
 class MainActivity : ComponentActivity() {
@@ -44,8 +45,11 @@ fun NavController() {
         composable(route = "CreateTaleScreen") {
             CreateTaleScreen(navController)
         }
-        composable(route = "NavActionButton") {
-            NavActionButton(navController)
+        composable(route = "Settings") {
+            Settings(navController)
+        }
+        composable(route = "FamilyInformation") {
+            FamilyInformation(navController)
         }
 
         composable("ReadTaleScreen" + "?id={id}", arguments = listOf(navArgument("id") {

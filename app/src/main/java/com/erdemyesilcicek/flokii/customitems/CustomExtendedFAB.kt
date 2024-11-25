@@ -50,7 +50,7 @@ fun ExtendedFAB(
             Text(
                 color = Color.White,
                 text = text,
-                fontSize = 20.sp,
+                fontSize = 22.sp,
                 fontWeight = FontWeight.Normal,
                 fontFamily = myFont
             )

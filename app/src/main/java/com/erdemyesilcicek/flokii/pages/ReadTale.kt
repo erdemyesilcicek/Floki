@@ -28,6 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.bar.AppBar
+import com.erdemyesilcicek.flokii.customitems.ExtendedFAB
 import com.erdemyesilcicek.flokii.lists.TaleList
 import com.erdemyesilcicek.flokii.datas.myFont
 
@@ -36,26 +37,26 @@ fun ReadTaleScreen(navController: NavController, id: Int?) {
     val tale = TaleList.get(id!!)
 
     Scaffold(
-        topBar = { AppBar(isHomeScreen = false, "My Tales", navController) },
+        topBar = {
+            AppBar(
+                isHomeScreen = false,
+                isEnableBarButton = true,
+                "My Tales",
+                navController) },
         modifier = Modifier.fillMaxSize(),
 
         floatingActionButton = {
-            FloatingActionButton(
-                onClick = { /*TODO*/ },
-                containerColor = MaterialTheme.colorScheme.primary,
-                elevation = FloatingActionButtonDefaults.elevation(10.dp),
-                modifier = Modifier
-                    .padding(20.dp),
-            ) {
-                Icon(
-                    modifier = Modifier.padding(20.dp),
-                    imageVector = Icons.Rounded.Audiotrack,
-                    contentDescription = "Listen to Tale",
-                    tint = Color.White
-                )
-            }
+            ExtendedFAB(
+                MaterialTheme.colorScheme.primary,
+                Icons.Rounded.Audiotrack,
+                "Listen to Tale Icon",
+                " Listen Tale",
+                onClick = {
+                    println("Listen to Tale Button Clicked")
+                }
+            )
         },
-        floatingActionButtonPosition = FabPosition.End
+        floatingActionButtonPosition = FabPosition.Center
     ) { padding ->
         Column(
             modifier = Modifier
@@ -85,7 +86,7 @@ fun ReadTaleScreen(navController: NavController, id: Int?) {
                         fontSize = 20.sp,
                         text = tale.content
                     )
-                    Spacer(modifier = Modifier.padding(20.dp))
+                    Spacer(modifier = Modifier.padding(40.dp))
 
                     Row(
                         modifier = Modifier.fillParentMaxWidth(),

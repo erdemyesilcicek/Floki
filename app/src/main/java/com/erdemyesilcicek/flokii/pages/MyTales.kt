@@ -24,7 +24,12 @@ import com.erdemyesilcicek.flokii.lists.TaleList
 @Composable
 fun MyTalesScreen(navController: NavController) {
     Scaffold(
-        topBar = { AppBar(isHomeScreen = true, "My Tales", navController) },
+        topBar = {
+            AppBar(
+                isHomeScreen = true,
+                isEnableBarButton = false,
+                "My Tales",
+                navController) },
         modifier = Modifier.fillMaxSize(),
 
         floatingActionButton = {
