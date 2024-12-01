@@ -23,7 +23,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.bar.AppBar
 import com.erdemyesilcicek.flokii.customitems.SettingsCard
-import com.erdemyesilcicek.flokii.datas.DataSettingsCard
+import com.erdemyesilcicek.flokii.datas.dataclass.DataSettingsCard
 
 @Composable
 fun Settings(navController: NavController) {
@@ -70,7 +70,7 @@ fun Settings(navController: NavController) {
     Scaffold(
         topBar = {
             AppBar(
-                isHomeScreen = false,
+                isEnableBackButton = false,
                 isEnableBarButton = true,
                 "",
                 navController

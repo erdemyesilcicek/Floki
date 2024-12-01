@@ -10,7 +10,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.erdemyesilcicek.flokii.customitems.CustomCardItem
-import com.erdemyesilcicek.flokii.datas.DataCardSection
+import com.erdemyesilcicek.flokii.datas.dataclass.DataCardSection
 
 @Composable
 fun CustomSection(list: List<DataCardSection>, isMultiple: Boolean) {

@@ -30,7 +30,7 @@ import com.erdemyesilcicek.flokii.datas.myFont
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun AppBar(
-    isHomeScreen: Boolean,
+    isEnableBackButton: Boolean,
     isEnableBarButton: Boolean,
     barText: String,
     navController: NavController
@@ -79,7 +79,7 @@ fun AppBar(
             }
         },
         navigationIcon = {
-            if (!isHomeScreen) {
+            if (!isEnableBackButton) {
                 IconButton(onClick = { navController.popBackStack() }) {
                     Icon(
                         imageVector = Icons.Rounded.ArrowBackIosNew,

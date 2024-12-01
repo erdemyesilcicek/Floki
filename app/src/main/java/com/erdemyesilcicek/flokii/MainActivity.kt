@@ -11,7 +11,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.erdemyesilcicek.flokii.datas.Card
-import com.erdemyesilcicek.flokii.datas.Tale
+import com.erdemyesilcicek.flokii.datas.dataclass.Tale
 import com.erdemyesilcicek.flokii.pages.CreateTaleScreen
 import com.erdemyesilcicek.flokii.pages.MyTalesScreen
 import com.erdemyesilcicek.flokii.pages.ReadTaleScreen
@@ -51,7 +51,6 @@ fun NavController() {
         composable(route = "FamilyInformation") {
             FamilyInformation(navController)
         }
-
         composable("ReadTaleScreen" + "?id={id}", arguments = listOf(navArgument("id") {
             type = NavType.IntType
             defaultValue = -1

@@ -26,7 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.erdemyesilcicek.flokii.datas.DataCardSection
+import com.erdemyesilcicek.flokii.datas.dataclass.DataCardSection
 import com.erdemyesilcicek.flokii.datas.myFont
 
 @Composable

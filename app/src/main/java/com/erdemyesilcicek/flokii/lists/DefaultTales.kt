@@ -1,7 +1,7 @@
 package com.erdemyesilcicek.flokii.lists
 
 import com.erdemyesilcicek.flokii.R
-import com.erdemyesilcicek.flokii.datas.Tale
+import com.erdemyesilcicek.flokii.datas.dataclass.Tale
 
 public val TaleList = listOf(
     Tale(

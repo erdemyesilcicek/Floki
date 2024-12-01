@@ -9,11 +9,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Audiotrack
 import androidx.compose.material.icons.rounded.AutoFixHigh
 import androidx.compose.material3.FabPosition
-import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.FloatingActionButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -29,8 +26,8 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.bar.AppBar
 import com.erdemyesilcicek.flokii.customitems.ExtendedFAB
-import com.erdemyesilcicek.flokii.lists.TaleList
 import com.erdemyesilcicek.flokii.datas.myFont
+import com.erdemyesilcicek.flokii.lists.TaleList
 
 @Composable
 fun ReadTaleScreen(navController: NavController, id: Int?) {
@@ -39,18 +36,20 @@ fun ReadTaleScreen(navController: NavController, id: Int?) {
     Scaffold(
         topBar = {
             AppBar(
-                isHomeScreen = false,
+                isEnableBackButton = false,
                 isEnableBarButton = true,
                 "My Tales",
-                navController) },
+                navController
+            )
+        },
         modifier = Modifier.fillMaxSize(),
 
         floatingActionButton = {
             ExtendedFAB(
                 MaterialTheme.colorScheme.primary,
-                Icons.Rounded.Audiotrack,
+                //Icons.Rounded.Audiotrack,
                 "Listen to Tale Icon",
-                " Listen Tale",
+                "Listen Tale",
                 onClick = {
                     println("Listen to Tale Button Clicked")
                 }

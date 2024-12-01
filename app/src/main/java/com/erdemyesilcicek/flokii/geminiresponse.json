@@ -1,0 +1,29 @@
+{
+  "title": "Erdem'in Kış Macerası",
+  "parameters": {
+    "Tür": "Fantastic",
+    "Mevsim": "Winter",
+    "Hayvanlar": [
+      "Fox",
+      "Camel"
+    ],
+    "Karakterler": [
+      "Chef",
+      "Clown"
+    ],
+    "Aile Bireyleri": [
+      "Dad",
+      "Mom"
+    ],
+    "Ana Karakter Bilgileri": {
+      "İsim": "Erdem",
+      "Cinsiyet": "Erkek",
+      "Yaş": 7,
+      "Anne Adı": "H",
+      "Baba Adı": "T",
+      "Kardeş Adı": "None",
+      "Dil Tercihi": "Türkçe"
+    }
+  },
+  "story": "Yedi yaşındaki Erdem, kışın karla kaplı pencereden dışarıyı izliyordu. Babası T, ona sıcak çikolata getirmişti. Tam o sırada, kapı çaldı. Kapıda, beyazlar içinde bir şef duruyordu. Şef, elinde kocaman bir kaşıkla Erdem'e sihirli bir çorba ikram etti. Çorbayı içen Erdem, birdenbire kendini ormanın içinde buldu.\n\nOrmanda, parlak mavi kuyruklu bir tilki koşturuyordu. Tilkinin peşinden giden Erdem, bir deveyle karşılaştı. Deve, sırtında rengarenk battaniyelerle Erdem'i gezdirmeye başladı.  Yolculukları sırasında, komik bir palyaço ile karşılaştılar. Palyaço, kartoplarını havaya atıp tutarak Erdem'i güldürdü.\n\nErdem, palyaçoya annesinin adının H olduğunu ve babasının ona bir kardan adam yapmayı vaat ettiğini anlattı.  Palyaço, sihirli değneğini salladı ve birdenbire önlerinde bir kardan adam belirdi! Erdem, kardan adamla oynadıktan sonra, deve onu evine geri götürdü.  Evde, annesi H ve babası T onu bekliyordu.\n\nErdem, o gün sihirli bir macera yaşadığını anlattı. Babası T, ona \"Bazen en güzel sihir, hayal gücümüzdedir,\" dedi.  Erdem, o günden sonra,  hayal gücünün ne kadar güçlü olduğunu ve ona ne kadar güzel maceralar yaşatabileceğini hiç unutmadı."
+}

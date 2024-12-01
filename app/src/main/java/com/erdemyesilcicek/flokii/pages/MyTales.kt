@@ -6,8 +6,6 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AutoFixHigh
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -17,8 +15,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.bar.AppBar
-import com.erdemyesilcicek.flokii.datas.Card
 import com.erdemyesilcicek.flokii.customitems.ExtendedFAB
+import com.erdemyesilcicek.flokii.datas.Card
 import com.erdemyesilcicek.flokii.lists.TaleList
 
 @Composable
@@ -26,18 +24,20 @@ fun MyTalesScreen(navController: NavController) {
     Scaffold(
         topBar = {
             AppBar(
-                isHomeScreen = true,
+                isEnableBackButton = true,
                 isEnableBarButton = false,
                 "My Tales",
-                navController) },
+                navController
+            )
+        },
         modifier = Modifier.fillMaxSize(),
 
         floatingActionButton = {
             ExtendedFAB(
                 MaterialTheme.colorScheme.primary,
-                Icons.Rounded.AutoFixHigh,
+                //Icons.Rounded.AutoFixHigh,
                 "Create a tale icon",
-                " Create Tale",
+                "Create Tale",
                 onClick = {
                     navController.navigate("CreateTaleScreen")
                 })

@@ -6,8 +6,6 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AutoFixHigh
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
@@ -21,8 +19,6 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
-import com.erdemyesilcicek.flokii.R
-import com.erdemyesilcicek.flokii.animations.LottieAnimation
 import com.erdemyesilcicek.flokii.bar.AppBar
 import com.erdemyesilcicek.flokii.createtalesections.CustomSection
 import com.erdemyesilcicek.flokii.createtalesections.TextSection
@@ -39,18 +35,20 @@ fun CreateTaleScreen(navController: NavController) {
     Scaffold(
         topBar = {
             AppBar(
-                isHomeScreen = false,
+                isEnableBackButton = false,
                 isEnableBarButton = false,
                 "Create Tale",
-                navController) },
+                navController
+            )
+        },
         modifier = Modifier.fillMaxSize(),
 
         floatingActionButton = {
             ExtendedFAB(
                 MaterialTheme.colorScheme.primary,
-                Icons.Rounded.AutoFixHigh,
+                //Icons.Rounded.AutoFixHigh,
                 "Create a tale icon",
-                " Create Tale",
+                "Create Tale",
                 onClick = {
                     println("create tale screen fab clicked")
                 })
@@ -77,8 +75,6 @@ fun CreateTaleScreen(navController: NavController) {
 
                 TextSection("Include in the tale")
                 CustomSection(list = familyList, true)
-
-                LottieAnimation(animation = R.raw.bigstick)
 
                 Spacer(modifier = Modifier.padding(50.dp))
 

@@ -7,14 +7,12 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ExtendedFloatingActionButton
 import androidx.compose.material3.FloatingActionButtonDefaults
-import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -23,7 +21,7 @@ import com.erdemyesilcicek.flokii.datas.myFont
 @Composable
 fun ExtendedFAB(
     containerColor: Color,
-    icon: ImageVector,
+    //icon: ImageVector,
     contentDescription: String,
     text: String,
     onClick: () -> Unit
@@ -42,11 +40,11 @@ fun ExtendedFAB(
             horizontalArrangement = Arrangement.Center,
             modifier = Modifier.padding(24.dp)
         ) {
-            Icon(
-                imageVector = icon,
-                contentDescription = contentDescription,
-                tint = Color.White
-            )
+//            Icon(
+//                imageVector = icon,
+//                contentDescription = contentDescription,
+//                tint = Color.White
+//            )
             Text(
                 color = Color.White,
                 text = text,

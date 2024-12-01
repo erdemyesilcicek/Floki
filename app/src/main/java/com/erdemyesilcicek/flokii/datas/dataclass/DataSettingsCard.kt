@@ -1,4 +1,4 @@
-package com.erdemyesilcicek.flokii.datas
+package com.erdemyesilcicek.flokii.datas.dataclass
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
