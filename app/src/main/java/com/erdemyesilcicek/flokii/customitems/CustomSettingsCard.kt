@@ -28,7 +28,8 @@ fun SettingsCard(
     imageVector: ImageVector,
     contentDescription: String,
     itemText: String,
-    onClick: () -> Unit ){
+    onClick: () -> Unit
+) {
     Column(
         modifier = Modifier
             .clickable { onClick() }
@@ -42,7 +43,11 @@ fun SettingsCard(
         ) {
             Column(
                 modifier = Modifier
-                    .border(1.dp, MaterialTheme.colorScheme.onBackground, shape = RoundedCornerShape(20.dp))
+                    .border(
+                        1.dp,
+                        MaterialTheme.colorScheme.onBackground,
+                        shape = RoundedCornerShape(20.dp)
+                    )
                     .width(150.dp)
                     .height(150.dp),
                 verticalArrangement = Arrangement.Center,
@@ -54,7 +59,8 @@ fun SettingsCard(
                         .padding(30.dp),
                     imageVector = imageVector,
                     contentDescription = contentDescription,
-                    tint = MaterialTheme.colorScheme.onBackground)
+                    tint = MaterialTheme.colorScheme.onBackground
+                )
             }
         }
         Text(

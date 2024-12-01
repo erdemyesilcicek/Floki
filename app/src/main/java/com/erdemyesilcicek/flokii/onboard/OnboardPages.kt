@@ -1,7 +1,6 @@
-package com.erdemyesilcicek.flokii.lists
+package com.erdemyesilcicek.flokii.onboard
 
 import com.erdemyesilcicek.flokii.R
-import com.erdemyesilcicek.flokii.datas.OnBoardPage
 
 public val onBoardPages = listOf(
     OnBoardPage(

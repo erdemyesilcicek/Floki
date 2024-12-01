@@ -80,5 +80,4 @@ dependencies {
     //OnBoard Screen
     implementation("androidx.compose.foundation:foundation:1.5.0")
     implementation("com.google.accompanist:accompanist-pager:0.30.1")
-
 }

@@ -41,6 +41,7 @@ fun CardTitle(title: String) {
 @Composable
 fun Card(navController: NavController, card: Tale) {
     CardTitle(card.title)
+
     OutlinedCard(
         border = BorderStroke(1.dp, MaterialTheme.colorScheme.onBackground),
         onClick = { },

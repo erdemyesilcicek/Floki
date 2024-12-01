@@ -24,15 +24,15 @@ import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.R
 import com.erdemyesilcicek.flokii.animations.LottieAnimation
 import com.erdemyesilcicek.flokii.bar.AppBar
+import com.erdemyesilcicek.flokii.createtalesections.CustomSection
+import com.erdemyesilcicek.flokii.createtalesections.TextSection
 import com.erdemyesilcicek.flokii.customitems.ExtendedFAB
+import com.erdemyesilcicek.flokii.datas.myFont
 import com.erdemyesilcicek.flokii.lists.animalList
 import com.erdemyesilcicek.flokii.lists.characterList
 import com.erdemyesilcicek.flokii.lists.familyList
 import com.erdemyesilcicek.flokii.lists.genreList
-import com.erdemyesilcicek.flokii.datas.myFont
 import com.erdemyesilcicek.flokii.lists.seasonList
-import com.erdemyesilcicek.flokii.sections.CustomSection
-import com.erdemyesilcicek.flokii.sections.TextSection
 
 @Composable
 fun CreateTaleScreen(navController: NavController) {
@@ -77,6 +77,8 @@ fun CreateTaleScreen(navController: NavController) {
 
                 TextSection("Include in the tale")
                 CustomSection(list = familyList, true)
+
+                LottieAnimation(animation = R.raw.bigstick)
 
                 Spacer(modifier = Modifier.padding(50.dp))
 

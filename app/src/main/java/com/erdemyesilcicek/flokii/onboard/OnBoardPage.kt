@@ -1,4 +1,4 @@
-package com.erdemyesilcicek.flokii.datas
+package com.erdemyesilcicek.flokii.onboard
 
 data class OnBoardPage(
     val title: String,

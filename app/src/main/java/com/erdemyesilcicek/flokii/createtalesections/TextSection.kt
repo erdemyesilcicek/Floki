@@ -1,4 +1,4 @@
-package com.erdemyesilcicek.flokii.sections
+package com.erdemyesilcicek.flokii.createtalesections
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
