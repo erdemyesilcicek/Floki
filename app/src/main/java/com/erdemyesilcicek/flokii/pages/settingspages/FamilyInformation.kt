@@ -1,7 +1,6 @@
 package com.erdemyesilcicek.flokii.pages.settingspages
 
 import androidx.compose.foundation.Image
-import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -10,14 +9,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
-import androidx.compose.material3.TextField
-import androidx.compose.material3.TextFieldDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -39,7 +34,8 @@ import com.erdemyesilcicek.flokii.bar.AppBar
 import com.erdemyesilcicek.flokii.createtalesections.TextSection
 import com.erdemyesilcicek.flokii.customitems.ExtendedFAB
 import com.erdemyesilcicek.flokii.customitems.RadioButtonGroup
-import com.erdemyesilcicek.flokii.datas.myFont
+import com.erdemyesilcicek.flokii.customitems.TextInputExample
+import com.erdemyesilcicek.flokii.datas.font.myFont
 
 @Composable
 fun FamilyInformation(
@@ -80,6 +76,7 @@ fun FamilyInformation(
                 contentScale = ContentScale.Fit
             )
             Text(
+                modifier = Modifier.padding(5.dp),
                 text = "Family Information",
                 fontFamily = FontFamily.Default,
                 fontSize = 22.sp
@@ -94,8 +91,7 @@ fun FamilyInformation(
                     TextSection(title = "Language")
                     Row(
                         modifier = Modifier
-                            .fillMaxWidth()
-                        ,
+                            .fillMaxWidth(),
                         verticalAlignment = Alignment.CenterVertically,
                         horizontalArrangement = Arrangement.SpaceBetween
                     ) {
@@ -108,12 +104,13 @@ fun FamilyInformation(
                             onOptionSelected = { selectedOption = it }
                         )
                     }
-                    TextInputExample("Name", "Enter Name")
-                    TextInputExample("Age", "Enter Age")
-                    TextInputExample("Gender", "Enter Gender")
-                    TextInputExample("Dad's Name", "Enter Dad's Name")
-                    TextInputExample("Mom's Name", "Enter Mom's Name")
-                    TextInputExample("Sis's Name", "Enter Sis's Name")
+                    TextInputExample("Name", "Enter Name", true)
+                    TextInputExample("Age", "Enter Age", true)
+                    TextInputExample("Gender", "Enter Gender", true)
+                    TextInputExample("Dad's Name", "Enter Dad's Name", true)
+                    TextInputExample("Mom's Name", "Enter Mom's Name", true)
+                    TextInputExample("Sis's Name", "Enter Sis's Name", true)
+
                     Spacer(modifier = Modifier.padding(40.dp))
 
                     Row(
@@ -133,45 +130,5 @@ fun FamilyInformation(
                 }
             }
         }
-    }
-}
-
-@OptIn(ExperimentalMaterial3Api::class)
-@Composable
-fun TextInputExample(title: String, label: String) {
-    val text = remember { mutableStateOf("") }
-    var isFocused by remember { mutableStateOf(false) }
-
-    Column(
-        modifier = Modifier
-            .padding(),
-        verticalArrangement = Arrangement.Center,
-        horizontalAlignment = Alignment.CenterHorizontally
-    ) {
-        TextSection(title = title)
-
-        TextField(
-            singleLine = true,
-            value = text.value,
-            onValueChange = { text.value = it },
-            label = { Text(text = label) },
-            modifier = Modifier
-                .padding(16.dp)
-                .fillMaxWidth()
-                .border(
-                    1.dp,
-                    MaterialTheme.colorScheme.onBackground,
-                    shape = RoundedCornerShape(20.dp)
-                ),
-            colors = TextFieldDefaults.textFieldColors(
-                containerColor = Color.White,
-                focusedIndicatorColor = Color.White,
-                unfocusedIndicatorColor = Color.White,
-                cursorColor = MaterialTheme.colorScheme.primary,
-                focusedLabelColor =
-                if (isFocused) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onBackground,
-                unfocusedLabelColor = MaterialTheme.colorScheme.onBackground,
-            ),
-        )
     }
 }

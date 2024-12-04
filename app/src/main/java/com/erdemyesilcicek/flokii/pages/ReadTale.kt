@@ -9,7 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.AutoFixHigh
+import androidx.compose.material.icons.outlined.AutoFixHigh
 import androidx.compose.material3.FabPosition
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -26,7 +26,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.bar.AppBar
 import com.erdemyesilcicek.flokii.customitems.ExtendedFAB
-import com.erdemyesilcicek.flokii.datas.myFont
+import com.erdemyesilcicek.flokii.datas.font.myFont
 import com.erdemyesilcicek.flokii.lists.TaleList
 
 @Composable
@@ -74,7 +74,7 @@ fun ReadTaleScreen(navController: NavController, id: Int?) {
                 textAlign = TextAlign.Center
             )
 
-            Icon(imageVector = Icons.Rounded.AutoFixHigh, contentDescription = "magic")
+            Icon(imageVector = Icons.Outlined.AutoFixHigh, contentDescription = "magic")
 
             LazyColumn(modifier = Modifier.fillMaxSize()) {
                 items(1) {

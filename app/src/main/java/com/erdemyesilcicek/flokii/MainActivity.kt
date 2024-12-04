@@ -17,6 +17,9 @@ import com.erdemyesilcicek.flokii.pages.MyTalesScreen
 import com.erdemyesilcicek.flokii.pages.ReadTaleScreen
 import com.erdemyesilcicek.flokii.pages.Settings
 import com.erdemyesilcicek.flokii.pages.settingspages.FamilyInformation
+import com.erdemyesilcicek.flokii.pages.settingspages.Feedback
+import com.erdemyesilcicek.flokii.pages.settingspages.PrivacyPolicy
+import com.erdemyesilcicek.flokii.pages.settingspages.TermOfUse
 import com.erdemyesilcicek.flokii.ui.theme.FlokiiTheme
 
 class MainActivity : ComponentActivity() {
@@ -50,6 +53,15 @@ fun NavController() {
         }
         composable(route = "FamilyInformation") {
             FamilyInformation(navController)
+        }
+        composable(route = "Feedback") {
+            Feedback(navController)
+        }
+        composable(route = "PrivacyPolicy") {
+            PrivacyPolicy(navController)
+        }
+        composable(route = "TermOfUse") {
+            TermOfUse(navController)
         }
         composable("ReadTaleScreen" + "?id={id}", arguments = listOf(navArgument("id") {
             type = NavType.IntType

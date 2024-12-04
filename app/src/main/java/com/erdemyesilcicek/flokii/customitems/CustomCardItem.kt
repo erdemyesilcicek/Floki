@@ -27,7 +27,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.erdemyesilcicek.flokii.datas.dataclass.DataCardSection
-import com.erdemyesilcicek.flokii.datas.myFont
+import com.erdemyesilcicek.flokii.datas.font.myFont
 
 @Composable
 fun CustomCardItem(index: Int, item: DataCardSection, isSelected: Boolean, onClick: () -> Unit) {

@@ -23,7 +23,7 @@ import com.erdemyesilcicek.flokii.bar.AppBar
 import com.erdemyesilcicek.flokii.createtalesections.CustomSection
 import com.erdemyesilcicek.flokii.createtalesections.TextSection
 import com.erdemyesilcicek.flokii.customitems.ExtendedFAB
-import com.erdemyesilcicek.flokii.datas.myFont
+import com.erdemyesilcicek.flokii.datas.font.myFont
 import com.erdemyesilcicek.flokii.lists.animalList
 import com.erdemyesilcicek.flokii.lists.characterList
 import com.erdemyesilcicek.flokii.lists.familyList

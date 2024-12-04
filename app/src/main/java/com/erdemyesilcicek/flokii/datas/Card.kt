@@ -25,6 +25,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.erdemyesilcicek.flokii.datas.dataclass.Tale
+import com.erdemyesilcicek.flokii.datas.font.myFont
 
 @Composable
 fun CardTitle(title: String) {

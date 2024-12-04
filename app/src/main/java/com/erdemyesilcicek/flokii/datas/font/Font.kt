@@ -1,4 +1,4 @@
-package com.erdemyesilcicek.flokii.datas
+package com.erdemyesilcicek.flokii.datas.font
 
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
